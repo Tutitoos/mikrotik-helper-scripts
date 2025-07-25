@@ -1,11 +1,4 @@
-# DNS Alert Bundle
-
-# Globals
-:global botToken "PASTE_YOUR_TOKEN_HERE"
-:global chatID "PASTE_YOUR_CHAT_ID_HERE"
-
-
-# --- AdGuard (94.140.14.14) ---
+# DNS Alert Bundle# --- AdGuard (94.140.14.14) ---
 /system script remove [find name="adguard_alert_check"]
 /system script add name=adguard_alert_check source=":log warning \"Netwatch disparo adguard_alert_check\";
 :global botToken
@@ -53,9 +46,7 @@
 
 # Scheduler
 /system scheduler remove [find name="adguard_alert_check_schedule"]
-/system scheduler add name=adguard_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run adguard_alert_check"
-
-# --- AdGuard (94.140.15.15) ---
+/system scheduler add name=adguard_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run adguard_alert_check"# --- AdGuard (94.140.15.15) ---
 /system script remove [find name="adguard_alt_alert_check"]
 /system script add name=adguard_alt_alert_check source=":log warning \"Netwatch disparo adguard_alt_alert_check\";
 :global botToken
@@ -103,9 +94,7 @@
 
 # Scheduler
 /system scheduler remove [find name="adguard_alt_alert_check_schedule"]
-/system scheduler add name=adguard_alt_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run adguard_alt_alert_check"
-
-# --- Cloudflare (1.1.1.1) ---
+/system scheduler add name=adguard_alt_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run adguard_alt_alert_check"# --- Cloudflare (1.1.1.1) ---
 /system script remove [find name="cloudflare_alert_check"]
 /system script add name=cloudflare_alert_check source=":log warning \"Netwatch disparo cloudflare_alert_check\";
 :global botToken
@@ -153,9 +142,7 @@
 
 # Scheduler
 /system scheduler remove [find name="cloudflare_alert_check_schedule"]
-/system scheduler add name=cloudflare_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run cloudflare_alert_check"
-
-# --- Cloudflare (1.0.0.1) ---
+/system scheduler add name=cloudflare_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run cloudflare_alert_check"# --- Cloudflare (1.0.0.1) ---
 /system script remove [find name="cloudflare_alt_alert_check"]
 /system script add name=cloudflare_alt_alert_check source=":log warning \"Netwatch disparo cloudflare_alt_alert_check\";
 :global botToken
@@ -203,9 +190,7 @@
 
 # Scheduler
 /system scheduler remove [find name="cloudflare_alt_alert_check_schedule"]
-/system scheduler add name=cloudflare_alt_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run cloudflare_alt_alert_check"
-
-# --- Google (8.8.8.8) ---
+/system scheduler add name=cloudflare_alt_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run cloudflare_alt_alert_check"# --- Google (8.8.8.8) ---
 /system script remove [find name="google_alert_check"]
 /system script add name=google_alert_check source=":log warning \"Netwatch disparo google_alert_check\";
 :global botToken
@@ -253,9 +238,7 @@
 
 # Scheduler
 /system scheduler remove [find name="google_alert_check_schedule"]
-/system scheduler add name=google_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run google_alert_check"
-
-# --- Google (8.8.4.4) ---
+/system scheduler add name=google_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run google_alert_check"# --- Google (8.8.4.4) ---
 /system script remove [find name="google_alt_alert_check"]
 /system script add name=google_alt_alert_check source=":log warning \"Netwatch disparo google_alt_alert_check\";
 :global botToken
@@ -303,9 +286,7 @@
 
 # Scheduler
 /system scheduler remove [find name="google_alt_alert_check_schedule"]
-/system scheduler add name=google_alt_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run google_alt_alert_check"
-
-# --- Quad9 (9.9.9.9) ---
+/system scheduler add name=google_alt_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run google_alt_alert_check"# --- Quad9 (9.9.9.9) ---
 /system script remove [find name="quad9_alert_check"]
 /system script add name=quad9_alert_check source=":log warning \"Netwatch disparo quad9_alert_check\";
 :global botToken
@@ -353,9 +334,7 @@
 
 # Scheduler
 /system scheduler remove [find name="quad9_alert_check_schedule"]
-/system scheduler add name=quad9_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run quad9_alert_check"
-
-# --- Quad9 (149.112.112.112) ---
+/system scheduler add name=quad9_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run quad9_alert_check"# --- Quad9 (149.112.112.112) ---
 /system script remove [find name="quad9_alt_alert_check"]
 /system script add name=quad9_alt_alert_check source=":log warning \"Netwatch disparo quad9_alt_alert_check\";
 :global botToken
