@@ -1,0 +1,74 @@
+[
+    {
+        "name": "AdGuard",
+        "ip": "94.140.14.14",
+        "scripts": [
+            "adguard_alert_check",
+            "adguard_alert_down",
+            "adguard_alert_up"
+        ]
+    },
+    {
+        "name": "AdGuard",
+        "ip": "94.140.15.15",
+        "scripts": [
+            "adguard_alt_alert_check",
+            "adguard_alt_alert_down",
+            "adguard_alt_alert_up"
+        ]
+    },
+    {
+        "name": "Cloudflare",
+        "ip": "1.1.1.1",
+        "scripts": [
+            "cloudflare_alert_check",
+            "cloudflare_alert_down",
+            "cloudflare_alert_up"
+        ]
+    },
+    {
+        "name": "Cloudflare",
+        "ip": "1.0.0.1",
+        "scripts": [
+            "cloudflare_alt_alert_check",
+            "cloudflare_alt_alert_down",
+            "cloudflare_alt_alert_up"
+        ]
+    },
+    {
+        "name": "Google",
+        "ip": "8.8.8.8",
+        "scripts": [
+            "google_alert_check",
+            "google_alert_down",
+            "google_alert_up"
+        ]
+    },
+    {
+        "name": "Google",
+        "ip": "8.8.4.4",
+        "scripts": [
+            "google_alt_alert_check",
+            "google_alt_alert_down",
+            "google_alt_alert_up"
+        ]
+    },
+    {
+        "name": "Quad9",
+        "ip": "9.9.9.9",
+        "scripts": [
+            "quad9_alert_check",
+            "quad9_alert_down",
+            "quad9_alert_up"
+        ]
+    },
+    {
+        "name": "Quad9",
+        "ip": "149.112.112.112",
+        "scripts": [
+            "quad9_alt_alert_check",
+            "quad9_alt_alert_down",
+            "quad9_alt_alert_up"
+        ]
+    }
+]
