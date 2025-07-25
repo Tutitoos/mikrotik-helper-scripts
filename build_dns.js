@@ -74,7 +74,7 @@ on-event="/system script run ${checkScript}"
 }
 
 function buildAllScripts() {
-  let output = `# DNS Alert Bundle`;
+  let output = "";
 
   for (const dns of config) {
     output += `\n\n# --- ${dns.name} (${dns.ip}) ---\n`;
