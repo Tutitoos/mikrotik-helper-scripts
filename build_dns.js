@@ -76,8 +76,6 @@ on-event="/system script run ${checkScript}"
 function buildAllScripts() {
   let output = `# DNS Alert Bundle\n\n`;
 
-  output += `# Globals\n:global botToken "PASTE_YOUR_TOKEN_HERE"\n:global chatID "PASTE_YOUR_CHAT_ID_HERE"\n`;
-
   for (const dns of config) {
     output += `\n\n# --- ${dns.name} (${dns.ip}) ---\n`;
     output += buildScript(dns);
