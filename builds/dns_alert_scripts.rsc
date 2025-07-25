@@ -1,6 +1,6 @@
 # --- AdGuard (94.140.14.14) ---
 /system script remove [find name="adguard_alert_check"]
-/system script add name=adguard_alert_check source=":log warning \"Netwatch disparo adguard_alert_check\";
+/system script add name=adguard_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alert_check\";
 :global botToken
 :global chatID
 :local name \"AdGuard\"
@@ -15,7 +15,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="adguard_alert_down"]
-/system script add name=adguard_alert_down source=":log warning \"Netwatch disparo adguard_alert_down\";
+/system script add name=adguard_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alert_down\";
 :global botToken
 :global chatID
 :local name \"AdGuard\"
@@ -28,7 +28,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="adguard_alert_up"]
-/system script add name=adguard_alert_up source=":log warning \"Netwatch disparo adguard_alert_up\";
+/system script add name=adguard_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alert_up\";
 :global botToken
 :global chatID
 :local name \"AdGuard\"
@@ -50,7 +50,7 @@
 
 # --- AdGuard (94.140.15.15) ---
 /system script remove [find name="adguard_alt_alert_check"]
-/system script add name=adguard_alt_alert_check source=":log warning \"Netwatch disparo adguard_alt_alert_check\";
+/system script add name=adguard_alt_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alt_alert_check\";
 :global botToken
 :global chatID
 :local name \"AdGuard\"
@@ -65,7 +65,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="adguard_alt_alert_down"]
-/system script add name=adguard_alt_alert_down source=":log warning \"Netwatch disparo adguard_alt_alert_down\";
+/system script add name=adguard_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alt_alert_down\";
 :global botToken
 :global chatID
 :local name \"AdGuard\"
@@ -78,7 +78,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="adguard_alt_alert_up"]
-/system script add name=adguard_alt_alert_up source=":log warning \"Netwatch disparo adguard_alt_alert_up\";
+/system script add name=adguard_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alt_alert_up\";
 :global botToken
 :global chatID
 :local name \"AdGuard\"
@@ -100,7 +100,7 @@
 
 # --- Cloudflare (1.1.1.1) ---
 /system script remove [find name="cloudflare_alert_check"]
-/system script add name=cloudflare_alert_check source=":log warning \"Netwatch disparo cloudflare_alert_check\";
+/system script add name=cloudflare_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alert_check\";
 :global botToken
 :global chatID
 :local name \"Cloudflare\"
@@ -115,7 +115,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="cloudflare_alert_down"]
-/system script add name=cloudflare_alert_down source=":log warning \"Netwatch disparo cloudflare_alert_down\";
+/system script add name=cloudflare_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alert_down\";
 :global botToken
 :global chatID
 :local name \"Cloudflare\"
@@ -128,7 +128,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="cloudflare_alert_up"]
-/system script add name=cloudflare_alert_up source=":log warning \"Netwatch disparo cloudflare_alert_up\";
+/system script add name=cloudflare_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alert_up\";
 :global botToken
 :global chatID
 :local name \"Cloudflare\"
@@ -150,7 +150,7 @@
 
 # --- Cloudflare (1.0.0.1) ---
 /system script remove [find name="cloudflare_alt_alert_check"]
-/system script add name=cloudflare_alt_alert_check source=":log warning \"Netwatch disparo cloudflare_alt_alert_check\";
+/system script add name=cloudflare_alt_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alt_alert_check\";
 :global botToken
 :global chatID
 :local name \"Cloudflare\"
@@ -165,7 +165,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="cloudflare_alt_alert_down"]
-/system script add name=cloudflare_alt_alert_down source=":log warning \"Netwatch disparo cloudflare_alt_alert_down\";
+/system script add name=cloudflare_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alt_alert_down\";
 :global botToken
 :global chatID
 :local name \"Cloudflare\"
@@ -178,7 +178,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="cloudflare_alt_alert_up"]
-/system script add name=cloudflare_alt_alert_up source=":log warning \"Netwatch disparo cloudflare_alt_alert_up\";
+/system script add name=cloudflare_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alt_alert_up\";
 :global botToken
 :global chatID
 :local name \"Cloudflare\"
@@ -200,7 +200,7 @@
 
 # --- Google (8.8.8.8) ---
 /system script remove [find name="google_alert_check"]
-/system script add name=google_alert_check source=":log warning \"Netwatch disparo google_alert_check\";
+/system script add name=google_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo google_alert_check\";
 :global botToken
 :global chatID
 :local name \"Google\"
@@ -215,7 +215,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="google_alert_down"]
-/system script add name=google_alert_down source=":log warning \"Netwatch disparo google_alert_down\";
+/system script add name=google_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo google_alert_down\";
 :global botToken
 :global chatID
 :local name \"Google\"
@@ -228,7 +228,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="google_alert_up"]
-/system script add name=google_alert_up source=":log warning \"Netwatch disparo google_alert_up\";
+/system script add name=google_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo google_alert_up\";
 :global botToken
 :global chatID
 :local name \"Google\"
@@ -250,7 +250,7 @@
 
 # --- Google (8.8.4.4) ---
 /system script remove [find name="google_alt_alert_check"]
-/system script add name=google_alt_alert_check source=":log warning \"Netwatch disparo google_alt_alert_check\";
+/system script add name=google_alt_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo google_alt_alert_check\";
 :global botToken
 :global chatID
 :local name \"Google\"
@@ -265,7 +265,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="google_alt_alert_down"]
-/system script add name=google_alt_alert_down source=":log warning \"Netwatch disparo google_alt_alert_down\";
+/system script add name=google_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo google_alt_alert_down\";
 :global botToken
 :global chatID
 :local name \"Google\"
@@ -278,7 +278,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="google_alt_alert_up"]
-/system script add name=google_alt_alert_up source=":log warning \"Netwatch disparo google_alt_alert_up\";
+/system script add name=google_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo google_alt_alert_up\";
 :global botToken
 :global chatID
 :local name \"Google\"
@@ -300,7 +300,7 @@
 
 # --- Quad9 (9.9.9.9) ---
 /system script remove [find name="quad9_alert_check"]
-/system script add name=quad9_alert_check source=":log warning \"Netwatch disparo quad9_alert_check\";
+/system script add name=quad9_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alert_check\";
 :global botToken
 :global chatID
 :local name \"Quad9\"
@@ -315,7 +315,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="quad9_alert_down"]
-/system script add name=quad9_alert_down source=":log warning \"Netwatch disparo quad9_alert_down\";
+/system script add name=quad9_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alert_down\";
 :global botToken
 :global chatID
 :local name \"Quad9\"
@@ -328,7 +328,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="quad9_alert_up"]
-/system script add name=quad9_alert_up source=":log warning \"Netwatch disparo quad9_alert_up\";
+/system script add name=quad9_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alert_up\";
 :global botToken
 :global chatID
 :local name \"Quad9\"
@@ -350,7 +350,7 @@
 
 # --- Quad9 (149.112.112.112) ---
 /system script remove [find name="quad9_alt_alert_check"]
-/system script add name=quad9_alt_alert_check source=":log warning \"Netwatch disparo quad9_alt_alert_check\";
+/system script add name=quad9_alt_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alt_alert_check\";
 :global botToken
 :global chatID
 :local name \"Quad9\"
@@ -365,7 +365,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="quad9_alt_alert_down"]
-/system script add name=quad9_alt_alert_down source=":log warning \"Netwatch disparo quad9_alt_alert_down\";
+/system script add name=quad9_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alt_alert_down\";
 :global botToken
 :global chatID
 :local name \"Quad9\"
@@ -378,7 +378,7 @@
 /tool fetch url=$url keep-result=no"
 
 /system script remove [find name="quad9_alt_alert_up"]
-/system script add name=quad9_alt_alert_up source=":log warning \"Netwatch disparo quad9_alt_alert_up\";
+/system script add name=quad9_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alt_alert_up\";
 :global botToken
 :global chatID
 :local name \"Quad9\"

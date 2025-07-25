@@ -43,7 +43,7 @@ ${baseVars}:local status ""
     }
 
     return `/system script remove [find name="${scriptId}"]
-/system script add name=${scriptId} source="${escapeString(body)}"\n`;
+/system script add name=${scriptId} policy=read,write,policy source="${escapeString(body)}"\n`;
   }).join("\n");
 }
 
