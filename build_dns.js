@@ -59,7 +59,7 @@ function buildNetwatch(dns) {
 
   return `
 /tool netwatch remove [find host="${ip}"]
-/tool netwatch add host=${ip} interval=00:00:30 timeout=5s comment="Monitoreo ${name} DNS ${ip}" \
+/tool netwatch add host=${ip} interval=00:00:30 timeout=5s comment="Monitoreo ${name} DNS ${ip}" policy=read,write,policy \
 down="/system script run ${downScript}" \
 up="/system script run ${upScript}"
 `.trim();
@@ -73,7 +73,7 @@ function buildScheduler(dns) {
   const schedulerName = `${checkScript}_schedule`;
 
   return `/system scheduler remove [find name="${schedulerName}"]
-/system scheduler add name=${schedulerName} start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 \
+/system scheduler add name=${schedulerName} policy=read,write,policy start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 \
 on-event="/system script run ${checkScript}"
 `.trim();
 }
