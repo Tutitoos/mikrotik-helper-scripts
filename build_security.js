@@ -5,9 +5,9 @@ const OUTPUT_FILE = "./builds/security_alert_scripts.rsc";
 
 function escapeString(str) {
   return str
-    .replace(/\\/g, "\\\\")
-    .replace(/\$/g, "\\$")
-    .replace(/"/g, '\\"');
+    .replace(/\\/g, '\\\\')       // escapa \
+    .replace(/\$/g, '\\$')        // escapa $
+    .replace(/"/g, '\\"');        // escapa "
 }
 
 function buildLoginFail(alert) {
@@ -16,10 +16,10 @@ function buildLoginFail(alert) {
   const interval = "00:10:00";
 
   const body = `:log warning "🔐 Demasiados intentos de login fallidos";
-:local botToken [/system script environment get [find name=\\"botToken\\"] value]
-:local chatID [/system script environment get [find name=\\"chatID\\"] value]
+:local botToken [/system script environment get [find name="botToken"] value]
+:local chatID [/system script environment get [find name="chatID"] value]
 :local message ("🚨 Se detectaron más de ${threshold} intentos fallidos en ${interval}.%0AFecha: " . [/system clock get date] . " " . [/system clock get time])
-:local url ("https://api.telegram.org/bot" . \$botToken . "/sendMessage?chat_id=" . \$chatID . "&text=" . \$message)
+:local url ("https://api.telegram.org/bot" . $botToken . "/sendMessage?chat_id=" . $chatID . "&text=" . $message)
 /tool fetch url=\$url keep-result=no`;
 
   return `# --- ${alert.name} ---
@@ -31,11 +31,11 @@ function buildPortScan(alert) {
   const script = alert.script || "undefined";
 
   const body = `:log warning "🔐 Escaneo de puertos detectado";
-:local botToken [/system script environment get [find name=\\"botToken\\"] value]
-:local chatID [/system script environment get [find name=\\"chatID\\"] value]
+:local botToken [/system script environment get [find name="botToken"] value]
+:local chatID [/system script environment get [find name="chatID"] value]
 :local message ("🚨 Posible escaneo de puertos detectado desde la red interna.%0AFecha: " . [/system clock get date] . " " . [/system clock get time])
-:local url ("https://api.telegram.org/bot" . \$botToken . "/sendMessage?chat_id=" . \$chatID . "&text=" . \$message)
-/tool fetch url=\$url keep-result=no`;
+:local url ("https://api.telegram.org/bot" . $botToken . "/sendMessage?chat_id=" . $chatID . "&text=" . $message)
+/tool fetch url=$url keep-result=no`;
 
   return `# --- ${alert.name} ---
 /system script remove [find name="${script}"]
@@ -47,11 +47,11 @@ function buildSuspiciousPorts(alert) {
   const ports = (alert.ports || []).join(", ");
 
   const body = `:log warning "🔐 Actividad sospechosa en puertos comunes";
-:local botToken [/system script environment get [find name=\\"botToken\\"] value]
-:local chatID [/system script environment get [find name=\\"chatID\\"] value]
+:local botToken [/system script environment get [find name="botToken"] value]
+:local chatID [/system script environment get [find name="chatID"] value]
 :local message ("🚨 Se detectó tráfico sospechoso en puertos comunes (${ports}).%0AFecha: " . [/system clock get date] . " " . [/system clock get time])
-:local url ("https://api.telegram.org/bot" . \$botToken . "/sendMessage?chat_id=" . \$chatID . "&text=" . \$message)
-/tool fetch url=\$url keep-result=no`;
+:local url ("https://api.telegram.org/bot" . $botToken . "/sendMessage?chat_id=" . $chatID . "&text=" . $message)
+/tool fetch url=$url keep-result=no`;
 
   return `# --- ${alert.name} ---
 /system script remove [find name="${script}"]
