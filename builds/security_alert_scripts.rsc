@@ -33,7 +33,7 @@
 /tool fetch url=\$url keep-result=no"
 
 # Firewall rule for port_scan
-/ip firewall raw add chain=prerouting protocol=tcp tcp-flags=fin,syn,rst,psh,ack,urg,ece,cwr action=add-src-to-address-list address-list=port_scan_list address-list-timeout=10m log=yes log-prefix="PORT-SCAN"
+/ip firewall raw add chain=prerouting protocol=tcp tcp-flags=fin,!syn,!rst,!psh,!ack,!urg action=add-src-to-address-list address-list=port_scan_list address-list-timeout=10m log=yes log-prefix="PORT-SCAN"
 /system scheduler remove [find name="security_port_scan_check_trigger"]
 /system scheduler add name=security_port_scan_check_trigger interval=5m on-event="/system script run security_port_scan_check" policy=read,write,policy
 
