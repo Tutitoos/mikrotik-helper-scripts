@@ -1,9 +1,9 @@
-# --- AdGuard (94.140.14.14) ---
+# --- AdGuard DNS (94.140.14.14) ---
 /system script remove [find name="adguard_alert_check"]
 /system script add name=adguard_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alert_check\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"AdGuard\"
+:local name \"AdGuard DNS\"
 :local ip \"94.140.14.14\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -20,7 +20,7 @@
 /system script add name=adguard_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alert_down\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"AdGuard\"
+:local name \"AdGuard DNS\"
 :local ip \"94.140.14.14\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -33,7 +33,7 @@
 /system script add name=adguard_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alert_up\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"AdGuard\"
+:local name \"AdGuard DNS\"
 :local ip \"94.140.14.14\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -44,18 +44,18 @@
 
 # Netwatch
 /tool netwatch remove [find host="94.140.14.14"]
-/tool netwatch add host=94.140.14.14 interval=00:00:30 timeout=5s comment="Monitoreo AdGuard 94.140.14.14" down="/system script run adguard_alert_down" up="/system script run adguard_alert_up"
+/tool netwatch add host=94.140.14.14 interval=00:00:30 timeout=5s comment="Monitoreo AdGuard DNS 94.140.14.14" down="/system script run adguard_alert_down" up="/system script run adguard_alert_up"
 
 # Scheduler
 /system scheduler remove [find name="adguard_alert_check_schedule"]
 /system scheduler add name=adguard_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run adguard_alert_check"
 
-# --- AdGuard (94.140.15.15) ---
+# --- AdGuard DNS (94.140.15.15) ---
 /system script remove [find name="adguard_alt_alert_check"]
 /system script add name=adguard_alt_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alt_alert_check\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"AdGuard\"
+:local name \"AdGuard DNS\"
 :local ip \"94.140.15.15\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -72,7 +72,7 @@
 /system script add name=adguard_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alt_alert_down\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"AdGuard\"
+:local name \"AdGuard DNS\"
 :local ip \"94.140.15.15\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -85,7 +85,7 @@
 /system script add name=adguard_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alt_alert_up\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"AdGuard\"
+:local name \"AdGuard DNS\"
 :local ip \"94.140.15.15\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -96,18 +96,18 @@
 
 # Netwatch
 /tool netwatch remove [find host="94.140.15.15"]
-/tool netwatch add host=94.140.15.15 interval=00:00:30 timeout=5s comment="Monitoreo AdGuard 94.140.15.15" down="/system script run adguard_alt_alert_down" up="/system script run adguard_alt_alert_up"
+/tool netwatch add host=94.140.15.15 interval=00:00:30 timeout=5s comment="Monitoreo AdGuard DNS 94.140.15.15" down="/system script run adguard_alt_alert_down" up="/system script run adguard_alt_alert_up"
 
 # Scheduler
 /system scheduler remove [find name="adguard_alt_alert_check_schedule"]
 /system scheduler add name=adguard_alt_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run adguard_alt_alert_check"
 
-# --- Cloudflare (1.1.1.1) ---
+# --- Cloudflare DNS (1.1.1.1) ---
 /system script remove [find name="cloudflare_alert_check"]
 /system script add name=cloudflare_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alert_check\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Cloudflare\"
+:local name \"Cloudflare DNS\"
 :local ip \"1.1.1.1\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -124,7 +124,7 @@
 /system script add name=cloudflare_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alert_down\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Cloudflare\"
+:local name \"Cloudflare DNS\"
 :local ip \"1.1.1.1\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -137,7 +137,7 @@
 /system script add name=cloudflare_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alert_up\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Cloudflare\"
+:local name \"Cloudflare DNS\"
 :local ip \"1.1.1.1\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -148,18 +148,18 @@
 
 # Netwatch
 /tool netwatch remove [find host="1.1.1.1"]
-/tool netwatch add host=1.1.1.1 interval=00:00:30 timeout=5s comment="Monitoreo Cloudflare 1.1.1.1" down="/system script run cloudflare_alert_down" up="/system script run cloudflare_alert_up"
+/tool netwatch add host=1.1.1.1 interval=00:00:30 timeout=5s comment="Monitoreo Cloudflare DNS 1.1.1.1" down="/system script run cloudflare_alert_down" up="/system script run cloudflare_alert_up"
 
 # Scheduler
 /system scheduler remove [find name="cloudflare_alert_check_schedule"]
 /system scheduler add name=cloudflare_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run cloudflare_alert_check"
 
-# --- Cloudflare (1.0.0.1) ---
+# --- Cloudflare DNS (1.0.0.1) ---
 /system script remove [find name="cloudflare_alt_alert_check"]
 /system script add name=cloudflare_alt_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alt_alert_check\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Cloudflare\"
+:local name \"Cloudflare DNS\"
 :local ip \"1.0.0.1\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -176,7 +176,7 @@
 /system script add name=cloudflare_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alt_alert_down\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Cloudflare\"
+:local name \"Cloudflare DNS\"
 :local ip \"1.0.0.1\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -189,7 +189,7 @@
 /system script add name=cloudflare_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alt_alert_up\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Cloudflare\"
+:local name \"Cloudflare DNS\"
 :local ip \"1.0.0.1\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -200,18 +200,18 @@
 
 # Netwatch
 /tool netwatch remove [find host="1.0.0.1"]
-/tool netwatch add host=1.0.0.1 interval=00:00:30 timeout=5s comment="Monitoreo Cloudflare 1.0.0.1" down="/system script run cloudflare_alt_alert_down" up="/system script run cloudflare_alt_alert_up"
+/tool netwatch add host=1.0.0.1 interval=00:00:30 timeout=5s comment="Monitoreo Cloudflare DNS 1.0.0.1" down="/system script run cloudflare_alt_alert_down" up="/system script run cloudflare_alt_alert_up"
 
 # Scheduler
 /system scheduler remove [find name="cloudflare_alt_alert_check_schedule"]
 /system scheduler add name=cloudflare_alt_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run cloudflare_alt_alert_check"
 
-# --- Google (8.8.8.8) ---
+# --- Google DNS (8.8.8.8) ---
 /system script remove [find name="google_alert_check"]
 /system script add name=google_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo google_alert_check\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Google\"
+:local name \"Google DNS\"
 :local ip \"8.8.8.8\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -228,7 +228,7 @@
 /system script add name=google_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo google_alert_down\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Google\"
+:local name \"Google DNS\"
 :local ip \"8.8.8.8\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -241,7 +241,7 @@
 /system script add name=google_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo google_alert_up\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Google\"
+:local name \"Google DNS\"
 :local ip \"8.8.8.8\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -252,18 +252,18 @@
 
 # Netwatch
 /tool netwatch remove [find host="8.8.8.8"]
-/tool netwatch add host=8.8.8.8 interval=00:00:30 timeout=5s comment="Monitoreo Google 8.8.8.8" down="/system script run google_alert_down" up="/system script run google_alert_up"
+/tool netwatch add host=8.8.8.8 interval=00:00:30 timeout=5s comment="Monitoreo Google DNS 8.8.8.8" down="/system script run google_alert_down" up="/system script run google_alert_up"
 
 # Scheduler
 /system scheduler remove [find name="google_alert_check_schedule"]
 /system scheduler add name=google_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run google_alert_check"
 
-# --- Google (8.8.4.4) ---
+# --- Google DNS (8.8.4.4) ---
 /system script remove [find name="google_alt_alert_check"]
 /system script add name=google_alt_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo google_alt_alert_check\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Google\"
+:local name \"Google DNS\"
 :local ip \"8.8.4.4\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -280,7 +280,7 @@
 /system script add name=google_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo google_alt_alert_down\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Google\"
+:local name \"Google DNS\"
 :local ip \"8.8.4.4\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -293,7 +293,7 @@
 /system script add name=google_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo google_alt_alert_up\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Google\"
+:local name \"Google DNS\"
 :local ip \"8.8.4.4\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -304,18 +304,18 @@
 
 # Netwatch
 /tool netwatch remove [find host="8.8.4.4"]
-/tool netwatch add host=8.8.4.4 interval=00:00:30 timeout=5s comment="Monitoreo Google 8.8.4.4" down="/system script run google_alt_alert_down" up="/system script run google_alt_alert_up"
+/tool netwatch add host=8.8.4.4 interval=00:00:30 timeout=5s comment="Monitoreo Google DNS 8.8.4.4" down="/system script run google_alt_alert_down" up="/system script run google_alt_alert_up"
 
 # Scheduler
 /system scheduler remove [find name="google_alt_alert_check_schedule"]
 /system scheduler add name=google_alt_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run google_alt_alert_check"
 
-# --- Quad9 (9.9.9.9) ---
+# --- Quad9 DNS (9.9.9.9) ---
 /system script remove [find name="quad9_alert_check"]
 /system script add name=quad9_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alert_check\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Quad9\"
+:local name \"Quad9 DNS\"
 :local ip \"9.9.9.9\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -332,7 +332,7 @@
 /system script add name=quad9_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alert_down\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Quad9\"
+:local name \"Quad9 DNS\"
 :local ip \"9.9.9.9\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -345,7 +345,7 @@
 /system script add name=quad9_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alert_up\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Quad9\"
+:local name \"Quad9 DNS\"
 :local ip \"9.9.9.9\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -356,18 +356,18 @@
 
 # Netwatch
 /tool netwatch remove [find host="9.9.9.9"]
-/tool netwatch add host=9.9.9.9 interval=00:00:30 timeout=5s comment="Monitoreo Quad9 9.9.9.9" down="/system script run quad9_alert_down" up="/system script run quad9_alert_up"
+/tool netwatch add host=9.9.9.9 interval=00:00:30 timeout=5s comment="Monitoreo Quad9 DNS 9.9.9.9" down="/system script run quad9_alert_down" up="/system script run quad9_alert_up"
 
 # Scheduler
 /system scheduler remove [find name="quad9_alert_check_schedule"]
 /system scheduler add name=quad9_alert_check_schedule start-date=2025-07-24 start-time=14:25:08 interval=08:00:00 on-event="/system script run quad9_alert_check"
 
-# --- Quad9 (149.112.112.112) ---
+# --- Quad9 DNS (149.112.112.112) ---
 /system script remove [find name="quad9_alt_alert_check"]
 /system script add name=quad9_alt_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alt_alert_check\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Quad9\"
+:local name \"Quad9 DNS\"
 :local ip \"149.112.112.112\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -384,7 +384,7 @@
 /system script add name=quad9_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alt_alert_down\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Quad9\"
+:local name \"Quad9 DNS\"
 :local ip \"149.112.112.112\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -397,7 +397,7 @@
 /system script add name=quad9_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alt_alert_up\";
 :local botToken [/system script environment get [find name=\"botToken\"] value]
 :local chatID [/system script environment get [find name=\"chatID\"] value]
-:local name \"Quad9\"
+:local name \"Quad9 DNS\"
 :local ip \"149.112.112.112\"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -408,7 +408,7 @@
 
 # Netwatch
 /tool netwatch remove [find host="149.112.112.112"]
-/tool netwatch add host=149.112.112.112 interval=00:00:30 timeout=5s comment="Monitoreo Quad9 149.112.112.112" down="/system script run quad9_alt_alert_down" up="/system script run quad9_alt_alert_up"
+/tool netwatch add host=149.112.112.112 interval=00:00:30 timeout=5s comment="Monitoreo Quad9 DNS 149.112.112.112" down="/system script run quad9_alt_alert_down" up="/system script run quad9_alt_alert_up"
 
 # Scheduler
 /system scheduler remove [find name="quad9_alt_alert_check_schedule"]
