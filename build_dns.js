@@ -79,7 +79,9 @@ on-event="/system script run ${checkScript}"
 }
 
 function buildAllScripts() {
-  let output = "";
+  let output = `# Global variables
+:global botToken [/system script environment get [find name="botToken"] value]
+:global chatID [/system script environment get [find name="chatID"] value]`;
 
   for (const dns of config) {
     output += `\n\n# --- ${dns.name} (${dns.ip}) ---\n`;

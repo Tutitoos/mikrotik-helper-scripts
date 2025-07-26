@@ -1,3 +1,7 @@
+# Global variables
+:global botToken [/system script environment get [find name="botToken"] value]
+:global chatID [/system script environment get [find name="chatID"] value]
+
 # --- AdGuard (94.140.14.14) ---
 /system script remove [find name="adguard_alert_check"]
 /system script add name=adguard_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alert_check\";
