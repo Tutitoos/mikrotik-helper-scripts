@@ -12,6 +12,8 @@
 :if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+:log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
+:log warning \$url
 /tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="adguard_alert_down"]
@@ -62,6 +64,8 @@
 :if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+:log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
+:log warning \$url
 /tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="adguard_alt_alert_down"]
@@ -112,6 +116,8 @@
 :if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+:log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
+:log warning \$url
 /tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="cloudflare_alert_down"]
@@ -162,6 +168,8 @@
 :if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+:log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
+:log warning \$url
 /tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="cloudflare_alt_alert_down"]
@@ -212,6 +220,8 @@
 :if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+:log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
+:log warning \$url
 /tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="google_alert_down"]
@@ -262,6 +272,8 @@
 :if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+:log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
+:log warning \$url
 /tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="google_alt_alert_down"]
@@ -312,6 +324,8 @@
 :if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+:log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
+:log warning \$url
 /tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="quad9_alert_down"]
@@ -362,6 +376,8 @@
 :if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+:log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
+:log warning \$url
 /tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="quad9_alt_alert_down"]

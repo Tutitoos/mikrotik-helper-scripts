@@ -42,6 +42,8 @@ ${baseVars}:local status ""
 :if ($isUp = 0) do={ :set status "Caido" } else={ :set status "En linea" }
 :local message ("Servicio:%20" . $name . "%0AIP:%20" . $ip . "%0AEstado:%20" . $status . "%0AFecha:%20" . $date . "%0AHora:%20" . $time)
 :local url ("https://api.telegram.org/bot" . $botToken . "/sendMessage?chat_id=" . $chatID . "&text=" . $message)
+:log info ("[DEBUG] Estado: " . $status . ", IP: " . $ip)
+:log warning $url
 /tool fetch url=$url keep-result=no`;
     }
 
