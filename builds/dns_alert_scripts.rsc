@@ -9,7 +9,7 @@
 :local time [/system clock get time]
 :local status \"\"
 :local isUp [/ping \$ip count=2]
-:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:if (\$isUp = 0) do={ :set status \"🔴 Caido\" } else={ :set status \"🟢 En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 :log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
@@ -24,7 +24,7 @@
 :local ip \"94.140.14.14\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Caido\"
+:local status \"🔴 Caido\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -37,7 +37,7 @@
 :local ip \"94.140.14.14\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Recuperado\"
+:local status \"🔵 Recuperado\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -61,7 +61,7 @@
 :local time [/system clock get time]
 :local status \"\"
 :local isUp [/ping \$ip count=2]
-:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:if (\$isUp = 0) do={ :set status \"🔴 Caido\" } else={ :set status \"🟢 En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 :log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
@@ -76,7 +76,7 @@
 :local ip \"94.140.15.15\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Caido\"
+:local status \"🔴 Caido\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -89,7 +89,7 @@
 :local ip \"94.140.15.15\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Recuperado\"
+:local status \"🔵 Recuperado\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -113,7 +113,7 @@
 :local time [/system clock get time]
 :local status \"\"
 :local isUp [/ping \$ip count=2]
-:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:if (\$isUp = 0) do={ :set status \"🔴 Caido\" } else={ :set status \"🟢 En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 :log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
@@ -128,7 +128,7 @@
 :local ip \"1.1.1.1\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Caido\"
+:local status \"🔴 Caido\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -141,7 +141,7 @@
 :local ip \"1.1.1.1\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Recuperado\"
+:local status \"🔵 Recuperado\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -165,7 +165,7 @@
 :local time [/system clock get time]
 :local status \"\"
 :local isUp [/ping \$ip count=2]
-:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:if (\$isUp = 0) do={ :set status \"🔴 Caido\" } else={ :set status \"🟢 En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 :log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
@@ -180,7 +180,7 @@
 :local ip \"1.0.0.1\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Caido\"
+:local status \"🔴 Caido\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -193,7 +193,7 @@
 :local ip \"1.0.0.1\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Recuperado\"
+:local status \"🔵 Recuperado\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -217,7 +217,7 @@
 :local time [/system clock get time]
 :local status \"\"
 :local isUp [/ping \$ip count=2]
-:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:if (\$isUp = 0) do={ :set status \"🔴 Caido\" } else={ :set status \"🟢 En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 :log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
@@ -232,7 +232,7 @@
 :local ip \"8.8.8.8\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Caido\"
+:local status \"🔴 Caido\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -245,7 +245,7 @@
 :local ip \"8.8.8.8\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Recuperado\"
+:local status \"🔵 Recuperado\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -269,7 +269,7 @@
 :local time [/system clock get time]
 :local status \"\"
 :local isUp [/ping \$ip count=2]
-:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:if (\$isUp = 0) do={ :set status \"🔴 Caido\" } else={ :set status \"🟢 En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 :log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
@@ -284,7 +284,7 @@
 :local ip \"8.8.4.4\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Caido\"
+:local status \"🔴 Caido\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -297,7 +297,7 @@
 :local ip \"8.8.4.4\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Recuperado\"
+:local status \"🔵 Recuperado\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -321,7 +321,7 @@
 :local time [/system clock get time]
 :local status \"\"
 :local isUp [/ping \$ip count=2]
-:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:if (\$isUp = 0) do={ :set status \"🔴 Caido\" } else={ :set status \"🟢 En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 :log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
@@ -336,7 +336,7 @@
 :local ip \"9.9.9.9\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Caido\"
+:local status \"🔴 Caido\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -349,7 +349,7 @@
 :local ip \"9.9.9.9\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Recuperado\"
+:local status \"🔵 Recuperado\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -373,7 +373,7 @@
 :local time [/system clock get time]
 :local status \"\"
 :local isUp [/ping \$ip count=2]
-:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:if (\$isUp = 0) do={ :set status \"🔴 Caido\" } else={ :set status \"🟢 En linea\" }
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 :log info (\"[DEBUG] Estado: \" . \$status . \", IP: \" . \$ip)
@@ -388,7 +388,7 @@
 :local ip \"149.112.112.112\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Caido\"
+:local status \"🔴 Caido\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"
@@ -401,7 +401,7 @@
 :local ip \"149.112.112.112\"
 :local date [/system clock get date]
 :local time [/system clock get time]
-:local status \"Recuperado\"
+:local status \"🔵 Recuperado\"
 :local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
 :local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
 /tool fetch url=\$url keep-result=no"

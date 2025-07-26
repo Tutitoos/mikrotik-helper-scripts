@@ -25,13 +25,13 @@ function buildScript(dns) {
 
     if (scriptId.includes("alert_up")) {
       body = `:log warning "Netwatch disparo ${scriptId}";
-${baseVars}:local status "Recuperado"
+${baseVars}:local status "🔵 Recuperado"
 :local message ("Servicio:%20" . $name . "%0AIP:%20" . $ip . "%0AEstado:%20" . $status . "%0AFecha:%20" . $date . "%0AHora:%20" . $time)
 :local url ("https://api.telegram.org/bot" . $botToken . "/sendMessage?chat_id=" . $chatID . "&text=" . $message)
 /tool fetch url=$url keep-result=no`;
     } else if (scriptId.includes("alert_down")) {
       body = `:log warning "Netwatch disparo ${scriptId}";
-${baseVars}:local status "Caido"
+${baseVars}:local status "🔴 Caido"
 :local message ("Servicio:%20" . $name . "%0AIP:%20" . $ip . "%0AEstado:%20" . $status . "%0AFecha:%20" . $date . "%0AHora:%20" . $time)
 :local url ("https://api.telegram.org/bot" . $botToken . "/sendMessage?chat_id=" . $chatID . "&text=" . $message)
 /tool fetch url=$url keep-result=no`;
@@ -39,7 +39,7 @@ ${baseVars}:local status "Caido"
       body = `:log warning "Netwatch disparo ${scriptId}";
 ${baseVars}:local status ""
 :local isUp [/ping $ip count=2]
-:if ($isUp = 0) do={ :set status "Caido" } else={ :set status "En linea" }
+:if ($isUp = 0) do={ :set status "🔴 Caido" } else={ :set status "🟢 En linea" }
 :local message ("Servicio:%20" . $name . "%0AIP:%20" . $ip . "%0AEstado:%20" . $status . "%0AFecha:%20" . $date . "%0AHora:%20" . $time)
 :local url ("https://api.telegram.org/bot" . $botToken . "/sendMessage?chat_id=" . $chatID . "&text=" . $message)
 :log info ("[DEBUG] Estado: " . $status . ", IP: " . $ip)
