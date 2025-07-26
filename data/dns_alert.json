@@ -1,6 +1,6 @@
 [
     {
-        "name": "AdGuard",
+        "name": "AdGuard DNS",
         "ip": "94.140.14.14",
         "scripts": [
             "adguard_alert_check",
@@ -9,7 +9,7 @@
         ]
     },
     {
-        "name": "AdGuard",
+        "name": "AdGuard DNS",
         "ip": "94.140.15.15",
         "scripts": [
             "adguard_alt_alert_check",
@@ -18,7 +18,7 @@
         ]
     },
     {
-        "name": "Cloudflare",
+        "name": "Cloudflare DNS",
         "ip": "1.1.1.1",
         "scripts": [
             "cloudflare_alert_check",
@@ -27,7 +27,7 @@
         ]
     },
     {
-        "name": "Cloudflare",
+        "name": "Cloudflare DNS",
         "ip": "1.0.0.1",
         "scripts": [
             "cloudflare_alt_alert_check",
@@ -36,7 +36,7 @@
         ]
     },
     {
-        "name": "Google",
+        "name": "Google DNS",
         "ip": "8.8.8.8",
         "scripts": [
             "google_alert_check",
@@ -45,7 +45,7 @@
         ]
     },
     {
-        "name": "Google",
+        "name": "Google DNS",
         "ip": "8.8.4.4",
         "scripts": [
             "google_alt_alert_check",
@@ -54,7 +54,7 @@
         ]
     },
     {
-        "name": "Quad9",
+        "name": "Quad9 DNS",
         "ip": "9.9.9.9",
         "scripts": [
             "quad9_alert_check",
@@ -63,7 +63,7 @@
         ]
     },
     {
-        "name": "Quad9",
+        "name": "Quad9 DNS",
         "ip": "149.112.112.112",
         "scripts": [
             "quad9_alt_alert_check",
