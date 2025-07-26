@@ -9,7 +9,7 @@ function escapeString(str) {
 
 function buildScript(alert) {
 	const { type, name, script, ports } = alert;
-  const threshold = 5;
+	const threshold = 5;
 
 	const baseVars = `:local botToken [/system script environment get [find name="botToken"] value]
 :local chatID [/system script environment get [find name="chatID"] value]
@@ -58,20 +58,20 @@ function buildFirewall(alert) {
 
 	switch (type) {
 		case "login_fail":
-			// Usamos logging por sistema
 			return `
 # Firewall rule for ${type}
-/ip firewall filter add chain=input protocol=tcp dst-port=22,8291 action=add-src-to-address-list \
-address-list=login_fail_list address-list-timeout=10m \
-connection-state=new log=yes log-prefix="LOGIN-FAIL"
+/ip firewall filter add chain=input protocol=tcp dst-port=22,8291 connection-state=new \
+action=add-src-to-address-list address-list=login_fail_list address-list-timeout=10m \
+log=yes log-prefix="LOGIN-FAIL"
 /system scheduler remove [find name="${script}_trigger"]
 /system scheduler add name=${script}_trigger interval=5m on-event="/system script run ${script}" policy=read,write,policy`;
 
 		case "port_scan":
 			return `
 # Firewall rule for ${type}
-/ip firewall raw add chain=prerouting protocol=tcp tcp-flags=fin,syn,rst,psh,ack,urg,ece, cwr \
-action=add-src-to-address-list address-list=port_scan_list address-list-timeout=10m log=yes log-prefix="PORT-SCAN"
+/ip firewall raw add chain=prerouting protocol=tcp tcp-flags=fin,syn,rst,psh,ack,urg,ece,cwr \
+action=add-src-to-address-list address-list=port_scan_list address-list-timeout=10m \
+log=yes log-prefix="PORT-SCAN"
 /system scheduler remove [find name="${script}_trigger"]
 /system scheduler add name=${script}_trigger interval=5m on-event="/system script run ${script}" policy=read,write,policy`;
 
@@ -114,3 +114,4 @@ function buildAllSecurityScripts() {
 }
 
 buildAllSecurityScripts();
+
