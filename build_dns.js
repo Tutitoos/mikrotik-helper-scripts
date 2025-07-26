@@ -14,7 +14,7 @@ function buildScript(dns) {
   const { name, ip, scripts } = dns;
   const baseVars = `:local botToken [/system script environment get [find name="botToken"] value]
 :local chatID [/system script environment get [find name="chatID"] value]
-:local name "${name}"
+:local name "${name} DNS"
 :local ip "${ip}"
 :local date [/system clock get date]
 :local time [/system clock get time]
@@ -59,7 +59,7 @@ function buildNetwatch(dns) {
 
   return `
 /tool netwatch remove [find host="${ip}"]
-/tool netwatch add host=${ip} interval=00:00:30 timeout=5s comment="Monitoreo ${name} ${ip}" \
+/tool netwatch add host=${ip} interval=00:00:30 timeout=5s comment="Monitoreo ${name} DNS ${ip}" \
 down="/system script run ${downScript}" \
 up="/system script run ${upScript}"
 `.trim();
