@@ -12,8 +12,8 @@ function escapeString(str) {
 
 function buildScript(dns) {
   const { name, ip, scripts } = dns;
-  const baseVars = `:global botToken
-:global chatID
+  const baseVars = `:local botToken [/system script environment get [find name="botToken"] value]
+:local chatID [/system script environment get [find name="chatID"] value]
 :local name "${name}"
 :local ip "${ip}"
 :local date [/system clock get date]
@@ -79,9 +79,7 @@ on-event="/system script run ${checkScript}"
 }
 
 function buildAllScripts() {
-  let output = `# Global variables
-:global botToken [/system script environment get [find name="botToken"] value]
-:global chatID [/system script environment get [find name="chatID"] value]`;
+  let output = "";
 
   for (const dns of config) {
     output += `\n\n# --- ${dns.name} (${dns.ip}) ---\n`;

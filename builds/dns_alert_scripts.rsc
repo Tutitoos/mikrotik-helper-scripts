@@ -1,12 +1,8 @@
-# Global variables
-:global botToken [/system script environment get [find name="botToken"] value]
-:global chatID [/system script environment get [find name="chatID"] value]
-
 # --- AdGuard (94.140.14.14) ---
 /system script remove [find name="adguard_alert_check"]
 /system script add name=adguard_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alert_check\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"AdGuard\"
 :local ip \"94.140.14.14\"
 :local date [/system clock get date]
@@ -22,8 +18,8 @@
 
 /system script remove [find name="adguard_alert_down"]
 /system script add name=adguard_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alert_down\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"AdGuard\"
 :local ip \"94.140.14.14\"
 :local date [/system clock get date]
@@ -35,8 +31,8 @@
 
 /system script remove [find name="adguard_alert_up"]
 /system script add name=adguard_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alert_up\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"AdGuard\"
 :local ip \"94.140.14.14\"
 :local date [/system clock get date]
@@ -57,8 +53,8 @@
 # --- AdGuard (94.140.15.15) ---
 /system script remove [find name="adguard_alt_alert_check"]
 /system script add name=adguard_alt_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alt_alert_check\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"AdGuard\"
 :local ip \"94.140.15.15\"
 :local date [/system clock get date]
@@ -74,8 +70,8 @@
 
 /system script remove [find name="adguard_alt_alert_down"]
 /system script add name=adguard_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alt_alert_down\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"AdGuard\"
 :local ip \"94.140.15.15\"
 :local date [/system clock get date]
@@ -87,8 +83,8 @@
 
 /system script remove [find name="adguard_alt_alert_up"]
 /system script add name=adguard_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alt_alert_up\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"AdGuard\"
 :local ip \"94.140.15.15\"
 :local date [/system clock get date]
@@ -109,8 +105,8 @@
 # --- Cloudflare (1.1.1.1) ---
 /system script remove [find name="cloudflare_alert_check"]
 /system script add name=cloudflare_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alert_check\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Cloudflare\"
 :local ip \"1.1.1.1\"
 :local date [/system clock get date]
@@ -126,8 +122,8 @@
 
 /system script remove [find name="cloudflare_alert_down"]
 /system script add name=cloudflare_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alert_down\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Cloudflare\"
 :local ip \"1.1.1.1\"
 :local date [/system clock get date]
@@ -139,8 +135,8 @@
 
 /system script remove [find name="cloudflare_alert_up"]
 /system script add name=cloudflare_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alert_up\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Cloudflare\"
 :local ip \"1.1.1.1\"
 :local date [/system clock get date]
@@ -161,8 +157,8 @@
 # --- Cloudflare (1.0.0.1) ---
 /system script remove [find name="cloudflare_alt_alert_check"]
 /system script add name=cloudflare_alt_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alt_alert_check\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Cloudflare\"
 :local ip \"1.0.0.1\"
 :local date [/system clock get date]
@@ -178,8 +174,8 @@
 
 /system script remove [find name="cloudflare_alt_alert_down"]
 /system script add name=cloudflare_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alt_alert_down\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Cloudflare\"
 :local ip \"1.0.0.1\"
 :local date [/system clock get date]
@@ -191,8 +187,8 @@
 
 /system script remove [find name="cloudflare_alt_alert_up"]
 /system script add name=cloudflare_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alt_alert_up\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Cloudflare\"
 :local ip \"1.0.0.1\"
 :local date [/system clock get date]
@@ -213,8 +209,8 @@
 # --- Google (8.8.8.8) ---
 /system script remove [find name="google_alert_check"]
 /system script add name=google_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo google_alert_check\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Google\"
 :local ip \"8.8.8.8\"
 :local date [/system clock get date]
@@ -230,8 +226,8 @@
 
 /system script remove [find name="google_alert_down"]
 /system script add name=google_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo google_alert_down\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Google\"
 :local ip \"8.8.8.8\"
 :local date [/system clock get date]
@@ -243,8 +239,8 @@
 
 /system script remove [find name="google_alert_up"]
 /system script add name=google_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo google_alert_up\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Google\"
 :local ip \"8.8.8.8\"
 :local date [/system clock get date]
@@ -265,8 +261,8 @@
 # --- Google (8.8.4.4) ---
 /system script remove [find name="google_alt_alert_check"]
 /system script add name=google_alt_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo google_alt_alert_check\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Google\"
 :local ip \"8.8.4.4\"
 :local date [/system clock get date]
@@ -282,8 +278,8 @@
 
 /system script remove [find name="google_alt_alert_down"]
 /system script add name=google_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo google_alt_alert_down\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Google\"
 :local ip \"8.8.4.4\"
 :local date [/system clock get date]
@@ -295,8 +291,8 @@
 
 /system script remove [find name="google_alt_alert_up"]
 /system script add name=google_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo google_alt_alert_up\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Google\"
 :local ip \"8.8.4.4\"
 :local date [/system clock get date]
@@ -317,8 +313,8 @@
 # --- Quad9 (9.9.9.9) ---
 /system script remove [find name="quad9_alert_check"]
 /system script add name=quad9_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alert_check\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Quad9\"
 :local ip \"9.9.9.9\"
 :local date [/system clock get date]
@@ -334,8 +330,8 @@
 
 /system script remove [find name="quad9_alert_down"]
 /system script add name=quad9_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alert_down\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Quad9\"
 :local ip \"9.9.9.9\"
 :local date [/system clock get date]
@@ -347,8 +343,8 @@
 
 /system script remove [find name="quad9_alert_up"]
 /system script add name=quad9_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alert_up\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Quad9\"
 :local ip \"9.9.9.9\"
 :local date [/system clock get date]
@@ -369,8 +365,8 @@
 # --- Quad9 (149.112.112.112) ---
 /system script remove [find name="quad9_alt_alert_check"]
 /system script add name=quad9_alt_alert_check policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alt_alert_check\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Quad9\"
 :local ip \"149.112.112.112\"
 :local date [/system clock get date]
@@ -386,8 +382,8 @@
 
 /system script remove [find name="quad9_alt_alert_down"]
 /system script add name=quad9_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alt_alert_down\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Quad9\"
 :local ip \"149.112.112.112\"
 :local date [/system clock get date]
@@ -399,8 +395,8 @@
 
 /system script remove [find name="quad9_alt_alert_up"]
 /system script add name=quad9_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alt_alert_up\";
-:global botToken
-:global chatID
+:local botToken [/system script environment get [find name=\"botToken\"] value]
+:local chatID [/system script environment get [find name=\"chatID\"] value]
 :local name \"Quad9\"
 :local ip \"149.112.112.112\"
 :local date [/system clock get date]
