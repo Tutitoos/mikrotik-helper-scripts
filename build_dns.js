@@ -4,7 +4,10 @@ const config = require("./data/dns_alert.json");
 const OUTPUT_FILE = "./builds/dns_alert_scripts.rsc";
 
 function escapeString(str) {
-  return str.replace(/"/g, '\\"');
+  return str
+    .replace(/\\/g, '\\\\')       // escapa \
+    .replace(/\$/g, '\\$')        // escapa $
+    .replace(/"/g, '\\"');        // escapa "
 }
 
 function buildScript(dns) {

@@ -8,11 +8,11 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"\"
-:local isUp [/ping $ip count=2]
-:if ($isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local isUp [/ping \$ip count=2]
+:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="adguard_alert_down"]
 /system script add name=adguard_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alert_down\";
@@ -23,9 +23,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Caido\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="adguard_alert_up"]
 /system script add name=adguard_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alert_up\";
@@ -36,9 +36,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Recuperado\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 # Netwatch
 /tool netwatch remove [find host="94.140.14.14"]
@@ -58,11 +58,11 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"\"
-:local isUp [/ping $ip count=2]
-:if ($isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local isUp [/ping \$ip count=2]
+:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="adguard_alt_alert_down"]
 /system script add name=adguard_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alt_alert_down\";
@@ -73,9 +73,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Caido\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="adguard_alt_alert_up"]
 /system script add name=adguard_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo adguard_alt_alert_up\";
@@ -86,9 +86,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Recuperado\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 # Netwatch
 /tool netwatch remove [find host="94.140.15.15"]
@@ -108,11 +108,11 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"\"
-:local isUp [/ping $ip count=2]
-:if ($isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local isUp [/ping \$ip count=2]
+:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="cloudflare_alert_down"]
 /system script add name=cloudflare_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alert_down\";
@@ -123,9 +123,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Caido\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="cloudflare_alert_up"]
 /system script add name=cloudflare_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alert_up\";
@@ -136,9 +136,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Recuperado\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 # Netwatch
 /tool netwatch remove [find host="1.1.1.1"]
@@ -158,11 +158,11 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"\"
-:local isUp [/ping $ip count=2]
-:if ($isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local isUp [/ping \$ip count=2]
+:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="cloudflare_alt_alert_down"]
 /system script add name=cloudflare_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alt_alert_down\";
@@ -173,9 +173,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Caido\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="cloudflare_alt_alert_up"]
 /system script add name=cloudflare_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo cloudflare_alt_alert_up\";
@@ -186,9 +186,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Recuperado\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 # Netwatch
 /tool netwatch remove [find host="1.0.0.1"]
@@ -208,11 +208,11 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"\"
-:local isUp [/ping $ip count=2]
-:if ($isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local isUp [/ping \$ip count=2]
+:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="google_alert_down"]
 /system script add name=google_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo google_alert_down\";
@@ -223,9 +223,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Caido\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="google_alert_up"]
 /system script add name=google_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo google_alert_up\";
@@ -236,9 +236,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Recuperado\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 # Netwatch
 /tool netwatch remove [find host="8.8.8.8"]
@@ -258,11 +258,11 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"\"
-:local isUp [/ping $ip count=2]
-:if ($isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local isUp [/ping \$ip count=2]
+:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="google_alt_alert_down"]
 /system script add name=google_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo google_alt_alert_down\";
@@ -273,9 +273,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Caido\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="google_alt_alert_up"]
 /system script add name=google_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo google_alt_alert_up\";
@@ -286,9 +286,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Recuperado\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 # Netwatch
 /tool netwatch remove [find host="8.8.4.4"]
@@ -308,11 +308,11 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"\"
-:local isUp [/ping $ip count=2]
-:if ($isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local isUp [/ping \$ip count=2]
+:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="quad9_alert_down"]
 /system script add name=quad9_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alert_down\";
@@ -323,9 +323,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Caido\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="quad9_alert_up"]
 /system script add name=quad9_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alert_up\";
@@ -336,9 +336,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Recuperado\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 # Netwatch
 /tool netwatch remove [find host="9.9.9.9"]
@@ -358,11 +358,11 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"\"
-:local isUp [/ping $ip count=2]
-:if ($isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local isUp [/ping \$ip count=2]
+:if (\$isUp = 0) do={ :set status \"Caido\" } else={ :set status \"En linea\" }
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="quad9_alt_alert_down"]
 /system script add name=quad9_alt_alert_down policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alt_alert_down\";
@@ -373,9 +373,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Caido\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 /system script remove [find name="quad9_alt_alert_up"]
 /system script add name=quad9_alt_alert_up policy=read,write,policy source=":log warning \"Netwatch disparo quad9_alt_alert_up\";
@@ -386,9 +386,9 @@
 :local date [/system clock get date]
 :local time [/system clock get time]
 :local status \"Recuperado\"
-:local message (\"Servicio:%20\" . $name . \"%0AIP:%20\" . $ip . \"%0AEstado:%20\" . $status . \"%0AFecha:%20\" . $date . \"%0AHora:%20\" . $time)
-:local url (\"https://api.telegram.org/bot\" . $botToken . \"/sendMessage?chat_id=\" . $chatID . \"&text=\" . $message)
-/tool fetch url=$url keep-result=no"
+:local message (\"Servicio:%20\" . \$name . \"%0AIP:%20\" . \$ip . \"%0AEstado:%20\" . \$status . \"%0AFecha:%20\" . \$date . \"%0AHora:%20\" . \$time)
+:local url (\"https://api.telegram.org/bot\" . \$botToken . \"/sendMessage?chat_id=\" . \$chatID . \"&text=\" . \$message)
+/tool fetch url=\$url keep-result=no"
 
 # Netwatch
 /tool netwatch remove [find host="149.112.112.112"]
