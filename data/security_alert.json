@@ -1,0 +1,25 @@
+[
+    {
+        "type": "login_fail",
+        "name": "Login Fail Alert",
+        "script": "security_login_fail_check"
+    },
+    {
+        "type": "port_scan",
+        "name": "Port Scan Alert",
+        "script": "security_port_scan_check"
+    },
+    {
+        "type": "suspicious_ports",
+        "name": "Suspicious Port Activity",
+        "ports": [
+            21,
+            22,
+            23,
+            445,
+            3389,
+            8006
+        ],
+        "script": "security_suspicious_ports_check"
+    }
+]
